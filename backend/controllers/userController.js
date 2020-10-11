@@ -54,6 +54,7 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error("Invalid user data");
   }
 });
+
 // @desc   GET user profile
 // @route  GET /api/users/profile
 // @acess  Private
@@ -100,4 +101,12 @@ const updateUserProfile = asyncHandler(async (req, res) => {
   }
 });
 
-export { authUser, registerUser, getUserProfile, updateUserProfile };
+// @desc   GET all useres
+// @route  GET /api/users
+// @acess  Private/Admin
+const getUsers= asyncHandler(async (req, res) => {
+  const users = await User.find({});
+  res.json(users)
+});
+
+export { authUser, registerUser, getUserProfile, updateUserProfile, getUsers };
