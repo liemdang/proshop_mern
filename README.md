@@ -1,5 +1,5 @@
 # proshop_mern
-# E-Commerce Webiste with MERN Stack
+# E-Commerce Website with MERN Stack
 
 Udemy Course with React, Node, Express and MongoDB
 
